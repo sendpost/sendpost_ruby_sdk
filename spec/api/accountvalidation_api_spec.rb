@@ -32,6 +32,18 @@ describe 'AccountvalidationApi' do
     end
   end
 
+  # unit tests for validate_router_validate_email_bulk
+  # Validate Emails In File Asynchronously
+  # @param fileinput CSV whose emails need to be validated
+  # @param x_account_api_key Account API Key
+  # @param [Hash] opts the optional parameters
+  # @return [ModelsBulkResponse]
+  describe 'validate_router_validate_email_bulk test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for validation_router_count
   # Count Total Validations
   # @param x_account_api_key Account API Key
@@ -64,6 +76,18 @@ describe 'AccountvalidationApi' do
   # @option opts [String] :search search
   # @return [Array<ModelsValidation>]
   describe 'validation_router_get_all test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for validation_router_validate_email_list
+  # Validate Email List Synchronously
+  # @param x_account_api_key Account API Key
+  # @param body The email list to be sent for being validated
+  # @param [Hash] opts the optional parameters
+  # @return [ModelsCleanedList]
+  describe 'validation_router_validate_email_list test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

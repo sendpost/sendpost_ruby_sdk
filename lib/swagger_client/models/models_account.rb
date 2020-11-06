@@ -18,13 +18,21 @@ module SwaggerClient
 
     attr_accessor :created
 
+    attr_accessor :current_email_service_provider
+
     attr_accessor :id
+
+    attr_accessor :industry
 
     attr_accessor :lock_threshold
 
     attr_accessor :locked
 
     attr_accessor :name
+
+    attr_accessor :onboard_q_answered
+
+    attr_accessor :sending_volume_per_month
 
     attr_accessor :url
 
@@ -33,10 +41,14 @@ module SwaggerClient
       {
         :'api_key' => :'apiKey',
         :'created' => :'created',
+        :'current_email_service_provider' => :'currentEmailServiceProvider',
         :'id' => :'id',
+        :'industry' => :'industry',
         :'lock_threshold' => :'lock_threshold',
         :'locked' => :'locked',
         :'name' => :'name',
+        :'onboard_q_answered' => :'onboardQAnswered',
+        :'sending_volume_per_month' => :'sendingVolumePerMonth',
         :'url' => :'url'
       }
     end
@@ -46,10 +58,14 @@ module SwaggerClient
       {
         :'api_key' => :'String',
         :'created' => :'Integer',
+        :'current_email_service_provider' => :'String',
         :'id' => :'Integer',
+        :'industry' => :'String',
         :'lock_threshold' => :'Integer',
         :'locked' => :'BOOLEAN',
         :'name' => :'String',
+        :'onboard_q_answered' => :'BOOLEAN',
+        :'sending_volume_per_month' => :'String',
         :'url' => :'String'
       }
     end
@@ -70,8 +86,16 @@ module SwaggerClient
         self.created = attributes[:'created']
       end
 
+      if attributes.has_key?(:'currentEmailServiceProvider')
+        self.current_email_service_provider = attributes[:'currentEmailServiceProvider']
+      end
+
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
+      end
+
+      if attributes.has_key?(:'industry')
+        self.industry = attributes[:'industry']
       end
 
       if attributes.has_key?(:'lock_threshold')
@@ -84,6 +108,14 @@ module SwaggerClient
 
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'onboardQAnswered')
+        self.onboard_q_answered = attributes[:'onboardQAnswered']
+      end
+
+      if attributes.has_key?(:'sendingVolumePerMonth')
+        self.sending_volume_per_month = attributes[:'sendingVolumePerMonth']
       end
 
       if attributes.has_key?(:'url')
@@ -111,10 +143,14 @@ module SwaggerClient
       self.class == o.class &&
           api_key == o.api_key &&
           created == o.created &&
+          current_email_service_provider == o.current_email_service_provider &&
           id == o.id &&
+          industry == o.industry &&
           lock_threshold == o.lock_threshold &&
           locked == o.locked &&
           name == o.name &&
+          onboard_q_answered == o.onboard_q_answered &&
+          sending_volume_per_month == o.sending_volume_per_month &&
           url == o.url
     end
 
@@ -127,7 +163,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [api_key, created, id, lock_threshold, locked, name, url].hash
+      [api_key, created, current_email_service_provider, id, industry, lock_threshold, locked, name, onboard_q_answered, sending_volume_per_month, url].hash
     end
 
     # Builds the object from hash

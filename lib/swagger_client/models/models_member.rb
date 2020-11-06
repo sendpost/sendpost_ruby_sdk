@@ -22,7 +22,13 @@ module SwaggerClient
 
     attr_accessor :is_verified
 
+    attr_accessor :company_name
+
     attr_accessor :created
+
+    attr_accessor :name
+
+    attr_accessor :phone_number
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -31,7 +37,10 @@ module SwaggerClient
         :'id' => :'Id',
         :'is_forbidden' => :'IsForbidden',
         :'is_verified' => :'IsVerified',
-        :'created' => :'created'
+        :'company_name' => :'companyName',
+        :'created' => :'created',
+        :'name' => :'name',
+        :'phone_number' => :'phoneNumber'
       }
     end
 
@@ -42,7 +51,10 @@ module SwaggerClient
         :'id' => :'Integer',
         :'is_forbidden' => :'BOOLEAN',
         :'is_verified' => :'BOOLEAN',
-        :'created' => :'Integer'
+        :'company_name' => :'String',
+        :'created' => :'Integer',
+        :'name' => :'String',
+        :'phone_number' => :'String'
       }
     end
 
@@ -70,8 +82,20 @@ module SwaggerClient
         self.is_verified = attributes[:'IsVerified']
       end
 
+      if attributes.has_key?(:'companyName')
+        self.company_name = attributes[:'companyName']
+      end
+
       if attributes.has_key?(:'created')
         self.created = attributes[:'created']
+      end
+
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'phoneNumber')
+        self.phone_number = attributes[:'phoneNumber']
       end
     end
 
@@ -97,7 +121,10 @@ module SwaggerClient
           id == o.id &&
           is_forbidden == o.is_forbidden &&
           is_verified == o.is_verified &&
-          created == o.created
+          company_name == o.company_name &&
+          created == o.created &&
+          name == o.name &&
+          phone_number == o.phone_number
     end
 
     # @see the `==` method
@@ -109,7 +136,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email, id, is_forbidden, is_verified, created].hash
+      [email, id, is_forbidden, is_verified, company_name, created, name, phone_number].hash
     end
 
     # Builds the object from hash
