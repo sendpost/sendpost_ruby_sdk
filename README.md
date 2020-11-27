@@ -88,6 +88,13 @@ Class | Method | HTTP request | Description
 *SwaggerClient::AccounteventApi* | [**event_router_get_all_event_timestamp_keys_of_a_sub_account_from_a_specific_node_for_a_given_time_range**](docs/AccounteventApi.md#event_router_get_all_event_timestamp_keys_of_a_sub_account_from_a_specific_node_for_a_given_time_range) | **GET** /account/event/node/timestampkeys | 
 *SwaggerClient::AccounteventApi* | [**event_router_get_all_events_of_a_account_from_a_specific_node**](docs/AccounteventApi.md#event_router_get_all_events_of_a_account_from_a_specific_node) | **POST** /account/event/node | 
 *SwaggerClient::AccounteventApi* | [**event_router_get_event_in_node**](docs/AccounteventApi.md#event_router_get_event_in_node) | **GET** /account/event/node/{eventId} | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_add**](docs/AccountincidentApi.md#incident_router_add) | **POST** /account/incident/{incidentId}/comment | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_count**](docs/AccountincidentApi.md#incident_router_count) | **GET** /account/incident/count | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_create**](docs/AccountincidentApi.md#incident_router_create) | **POST** /account/incident/ | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_get_all**](docs/AccountincidentApi.md#incident_router_get_all) | **GET** /account/incident/ | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_get_all_comments**](docs/AccountincidentApi.md#incident_router_get_all_comments) | **GET** /account/incident/{incidentId}/comment | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_get_incident**](docs/AccountincidentApi.md#incident_router_get_incident) | **GET** /account/incident/{incidentId} | 
+*SwaggerClient::AccountincidentApi* | [**incident_router_update**](docs/AccountincidentApi.md#incident_router_update) | **PUT** /account/incident/{incidentId} | 
 *SwaggerClient::AccountintegrationApi* | [**account_integration_router_count**](docs/AccountintegrationApi.md#account_integration_router_count) | **GET** /account/integration/count | 
 *SwaggerClient::AccountintegrationApi* | [**account_integration_router_create**](docs/AccountintegrationApi.md#account_integration_router_create) | **POST** /account/integration/{itype} | 
 *SwaggerClient::AccountintegrationApi* | [**account_integration_router_delete**](docs/AccountintegrationApi.md#account_integration_router_delete) | **DELETE** /account/integration/{itype} | 
@@ -128,6 +135,10 @@ Class | Method | HTTP request | Description
 *SwaggerClient::AccountmessageApi* | [**message_router_get_all_events_for_a_message_id**](docs/AccountmessageApi.md#message_router_get_all_events_for_a_message_id) | **GET** /account/message/{messageId}/events | 
 *SwaggerClient::AccountmessageApi* | [**message_router_get_all_events_for_a_message_id_from_a_node**](docs/AccountmessageApi.md#message_router_get_all_events_for_a_message_id_from_a_node) | **GET** /account/message/node/{messageId}/events | 
 *SwaggerClient::AccountmessageApi* | [**message_router_get_message_from_node**](docs/AccountmessageApi.md#message_router_get_message_from_node) | **GET** /account/message/node/{messageId} | 
+*SwaggerClient::AccountonboardingApi* | [**onboarding_router_get_onboarding_checklist**](docs/AccountonboardingApi.md#onboarding_router_get_onboarding_checklist) | **GET** /account/onboarding/checklist | 
+*SwaggerClient::AccountpaymentApi* | [**payment_router_create_customer_portal**](docs/AccountpaymentApi.md#payment_router_create_customer_portal) | **POST** /account/payment/portal | 
+*SwaggerClient::AccountpaymentApi* | [**payment_router_create_payment_subscription**](docs/AccountpaymentApi.md#payment_router_create_payment_subscription) | **POST** /account/payment/subscription | 
+*SwaggerClient::AccountpaymentApi* | [**payment_router_handle_payment_webhook**](docs/AccountpaymentApi.md#payment_router_handle_payment_webhook) | **POST** /account/payment/webhook | 
 *SwaggerClient::AccountrecipientApi* | [**recipient_router_get_all_messages_for_a_recipient**](docs/AccountrecipientApi.md#recipient_router_get_all_messages_for_a_recipient) | **GET** /account/recipient/{recipient}/messages | 
 *SwaggerClient::AccountrecipientApi* | [**recipient_router_get_all_messages_for_a_recipient_from_a_node**](docs/AccountrecipientApi.md#recipient_router_get_all_messages_for_a_recipient_from_a_node) | **GET** /account/recipient/node/{recipient}/messages | 
 *SwaggerClient::AccountsmtpstatApi* | [**s_mtp_stat_router_get_all_aggregate_ip_provider_smtp_stats**](docs/AccountsmtpstatApi.md#s_mtp_stat_router_get_all_aggregate_ip_provider_smtp_stats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{pname}/aggregate | 
@@ -146,6 +157,14 @@ Class | Method | HTTP request | Description
 *SwaggerClient::AccountsubaccountApi* | [**sub_account_router_get**](docs/AccountsubaccountApi.md#sub_account_router_get) | **GET** /account/subaccount/{subAccountId} | 
 *SwaggerClient::AccountsubaccountApi* | [**sub_account_router_get_all**](docs/AccountsubaccountApi.md#sub_account_router_get_all) | **GET** /account/subaccount/ | 
 *SwaggerClient::AccountsubaccountApi* | [**sub_account_router_update**](docs/AccountsubaccountApi.md#sub_account_router_update) | **PUT** /account/subaccount/{subAccountId} | 
+*SwaggerClient::AccounttagApi* | [**tag_router_create**](docs/AccounttagApi.md#tag_router_create) | **POST** /account/tag/ | 
+*SwaggerClient::AccounttagApi* | [**tag_router_delete**](docs/AccounttagApi.md#tag_router_delete) | **DELETE** /account/tag/{tagid} | 
+*SwaggerClient::AccounttagApi* | [**tag_router_get_all**](docs/AccounttagApi.md#tag_router_get_all) | **GET** /account/tag/ | 
+*SwaggerClient::AccounttemplateApi* | [**account_template_router_create**](docs/AccounttemplateApi.md#account_template_router_create) | **POST** /account/template/ | 
+*SwaggerClient::AccounttemplateApi* | [**account_template_router_delete**](docs/AccounttemplateApi.md#account_template_router_delete) | **DELETE** /account/template/{templateid} | 
+*SwaggerClient::AccounttemplateApi* | [**account_template_router_get**](docs/AccounttemplateApi.md#account_template_router_get) | **GET** /account/template/{templateid} | 
+*SwaggerClient::AccounttemplateApi* | [**account_template_router_get_all**](docs/AccounttemplateApi.md#account_template_router_get_all) | **GET** /account/template/ | 
+*SwaggerClient::AccounttemplateApi* | [**account_template_router_update**](docs/AccounttemplateApi.md#account_template_router_update) | **PUT** /account/template/{templateid} | 
 *SwaggerClient::AccountvalidationApi* | [**validate_router_validate_email_bulk**](docs/AccountvalidationApi.md#validate_router_validate_email_bulk) | **POST** /account/validation/bulk | 
 *SwaggerClient::AccountvalidationApi* | [**validation_router_count**](docs/AccountvalidationApi.md#validation_router_count) | **GET** /account/validation/count | 
 *SwaggerClient::AccountvalidationApi* | [**validation_router_delete_validation**](docs/AccountvalidationApi.md#validation_router_delete_validation) | **DELETE** /account/validation/ | 
@@ -153,12 +172,13 @@ Class | Method | HTTP request | Description
 *SwaggerClient::AccountvalidationApi* | [**validation_router_validate_email_list**](docs/AccountvalidationApi.md#validation_router_validate_email_list) | **POST** /account/validation/ | 
 *SwaggerClient::AccountwebhookApi* | [**account_webhook_router_count**](docs/AccountwebhookApi.md#account_webhook_router_count) | **GET** /account/webhook/count | 
 *SwaggerClient::AccountwebhookApi* | [**account_webhook_router_create**](docs/AccountwebhookApi.md#account_webhook_router_create) | **POST** /account/webhook/ | 
-*SwaggerClient::AccountwebhookApi* | [**account_webhook_router_create_account_webhook_in_account_webhook_cache**](docs/AccountwebhookApi.md#account_webhook_router_create_account_webhook_in_account_webhook_cache) | **POST** /account/webhook/cache | 
 *SwaggerClient::AccountwebhookApi* | [**account_webhook_router_delete**](docs/AccountwebhookApi.md#account_webhook_router_delete) | **DELETE** /account/webhook/{webhookId} | 
-*SwaggerClient::AccountwebhookApi* | [**account_webhook_router_delete_account_webhook_in_account_webhook_cache**](docs/AccountwebhookApi.md#account_webhook_router_delete_account_webhook_in_account_webhook_cache) | **DELETE** /account/webhook/cache | 
 *SwaggerClient::AccountwebhookApi* | [**account_webhook_router_get**](docs/AccountwebhookApi.md#account_webhook_router_get) | **GET** /account/webhook/{webhookId} | 
 *SwaggerClient::AccountwebhookApi* | [**account_webhook_router_get_all**](docs/AccountwebhookApi.md#account_webhook_router_get_all) | **GET** /account/webhook/ | 
 *SwaggerClient::AccountwebhookApi* | [**account_webhook_router_update**](docs/AccountwebhookApi.md#account_webhook_router_update) | **PUT** /account/webhook/{webhookId} | 
+*SwaggerClient::ClusterApi* | [**cluster_router_delete_item_from_cache_of_every_node_in_cluster**](docs/ClusterApi.md#cluster_router_delete_item_from_cache_of_every_node_in_cluster) | **DELETE** /cluster/cache | 
+*SwaggerClient::ClusterApi* | [**cluster_router_delete_item_from_cache_of_specific_node_in_cluster**](docs/ClusterApi.md#cluster_router_delete_item_from_cache_of_specific_node_in_cluster) | **DELETE** /cluster/cache/node | 
+*SwaggerClient::EditorApi* | [**editor_api_router_get_token**](docs/EditorApi.md#editor_api_router_get_token) | **GET** /editor/ | 
 *SwaggerClient::SmtpApi* | [**s_mtp_router_receive_webhooks_raised_from_smtp_servers**](docs/SmtpApi.md#s_mtp_router_receive_webhooks_raised_from_smtp_servers) | **POST** /smtp/webhook | 
 *SwaggerClient::SubaccountdomainApi* | [**domain_router_count**](docs/SubaccountdomainApi.md#domain_router_count) | **GET** /subaccount/domain/count | 
 *SwaggerClient::SubaccountdomainApi* | [**domain_router_create**](docs/SubaccountdomainApi.md#domain_router_create) | **POST** /subaccount/domain/ | 
@@ -167,7 +187,10 @@ Class | Method | HTTP request | Description
 *SwaggerClient::SubaccountdomainApi* | [**domain_router_get_all**](docs/SubaccountdomainApi.md#domain_router_get_all) | **GET** /subaccount/domain/ | 
 *SwaggerClient::SubaccountdomainApi* | [**domain_router_update**](docs/SubaccountdomainApi.md#domain_router_update) | **PUT** /subaccount/domain/{domainId} | 
 *SwaggerClient::SubaccountdomainApi* | [**domain_router_verify**](docs/SubaccountdomainApi.md#domain_router_verify) | **POST** /subaccount/domain/{domainId}/verify | 
+*SwaggerClient::SubaccountdomainApi* | [**domain_router_verify_by_token**](docs/SubaccountdomainApi.md#domain_router_verify_by_token) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+*SwaggerClient::SubaccountdomainApi* | [**domain_router_verify_request**](docs/SubaccountdomainApi.md#domain_router_verify_request) | **POST** /subaccount/domain/{domainId}/verify/email | 
 *SwaggerClient::SubaccountemailApi* | [**email_router_send_email**](docs/SubaccountemailApi.md#email_router_send_email) | **POST** /subaccount/email/ | 
+*SwaggerClient::SubaccountemailApi* | [**email_router_send_email_with_template**](docs/SubaccountemailApi.md#email_router_send_email_with_template) | **POST** /subaccount/email/template | 
 *SwaggerClient::SubaccountippoolApi* | [**i_p_pool_router_count**](docs/SubaccountippoolApi.md#i_p_pool_router_count) | **GET** /subaccount/ippool/count | 
 *SwaggerClient::SubaccountippoolApi* | [**i_p_pool_router_create**](docs/SubaccountippoolApi.md#i_p_pool_router_create) | **POST** /subaccount/ippool/ | 
 *SwaggerClient::SubaccountippoolApi* | [**i_p_pool_router_delete**](docs/SubaccountippoolApi.md#i_p_pool_router_delete) | **DELETE** /subaccount/ippool/{ippoolid} | 
@@ -194,6 +217,7 @@ Class | Method | HTTP request | Description
 *SwaggerClient::SubaccountsuppressionApi* | [**suppression_router_delete_suppression**](docs/SubaccountsuppressionApi.md#suppression_router_delete_suppression) | **DELETE** /subaccount/suppression/ | 
 *SwaggerClient::SubaccountsuppressionApi* | [**suppression_router_delete_suppressions_in_suppression_filter**](docs/SubaccountsuppressionApi.md#suppression_router_delete_suppressions_in_suppression_filter) | **DELETE** /subaccount/suppression/filter | 
 *SwaggerClient::SubaccountsuppressionApi* | [**suppression_router_get_all_suppressions**](docs/SubaccountsuppressionApi.md#suppression_router_get_all_suppressions) | **GET** /subaccount/suppression/ | 
+*SwaggerClient::SystemApi* | [**system_template_router_get_all_system_templates**](docs/SystemApi.md#system_template_router_get_all_system_templates) | **GET** /system/template | 
 
 
 ## Documentation for Models
@@ -203,6 +227,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SwaggerClient::ModelsAccount](docs/ModelsAccount.md)
  - [SwaggerClient::ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
+ - [SwaggerClient::ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
  - [SwaggerClient::ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
  - [SwaggerClient::ModelsAlertLabel](docs/ModelsAlertLabel.md)
  - [SwaggerClient::ModelsAlertRequest](docs/ModelsAlertRequest.md)
@@ -211,26 +236,32 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SwaggerClient::ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SwaggerClient::ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
+ - [SwaggerClient::ModelsBillingPortalSession](docs/ModelsBillingPortalSession.md)
  - [SwaggerClient::ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
  - [SwaggerClient::ModelsBulkResponse](docs/ModelsBulkResponse.md)
  - [SwaggerClient::ModelsCity](docs/ModelsCity.md)
  - [SwaggerClient::ModelsCleanedList](docs/ModelsCleanedList.md)
+ - [SwaggerClient::ModelsComment](docs/ModelsComment.md)
  - [SwaggerClient::ModelsCountStat](docs/ModelsCountStat.md)
+ - [SwaggerClient::ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
  - [SwaggerClient::ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SwaggerClient::ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SwaggerClient::ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [SwaggerClient::ModelsDomain](docs/ModelsDomain.md)
  - [SwaggerClient::ModelsEAccount](docs/ModelsEAccount.md)
  - [SwaggerClient::ModelsEAccountMember](docs/ModelsEAccountMember.md)
+ - [SwaggerClient::ModelsEComment](docs/ModelsEComment.md)
  - [SwaggerClient::ModelsEDomain](docs/ModelsEDomain.md)
  - [SwaggerClient::ModelsEIP](docs/ModelsEIP.md)
  - [SwaggerClient::ModelsEIPPool](docs/ModelsEIPPool.md)
+ - [SwaggerClient::ModelsEIncident](docs/ModelsEIncident.md)
  - [SwaggerClient::ModelsEIntegration](docs/ModelsEIntegration.md)
  - [SwaggerClient::ModelsEInvitation](docs/ModelsEInvitation.md)
  - [SwaggerClient::ModelsESender](docs/ModelsESender.md)
  - [SwaggerClient::ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SwaggerClient::ModelsEValidation](docs/ModelsEValidation.md)
  - [SwaggerClient::ModelsEWebhook](docs/ModelsEWebhook.md)
+ - [SwaggerClient::ModelsEditorTokenResponse](docs/ModelsEditorTokenResponse.md)
  - [SwaggerClient::ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [SwaggerClient::ModelsEmailList](docs/ModelsEmailList.md)
  - [SwaggerClient::ModelsEmailMessage](docs/ModelsEmailMessage.md)
@@ -241,12 +272,18 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::ModelsFrom](docs/ModelsFrom.md)
  - [SwaggerClient::ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
  - [SwaggerClient::ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
+ - [SwaggerClient::ModelsIEIP](docs/ModelsIEIP.md)
+ - [SwaggerClient::ModelsIEMember](docs/ModelsIEMember.md)
+ - [SwaggerClient::ModelsIESubAccount](docs/ModelsIESubAccount.md)
+ - [SwaggerClient::ModelsIETag](docs/ModelsIETag.md)
  - [SwaggerClient::ModelsIIP](docs/ModelsIIP.md)
  - [SwaggerClient::ModelsIP](docs/ModelsIP.md)
  - [SwaggerClient::ModelsIPPool](docs/ModelsIPPool.md)
  - [SwaggerClient::ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SwaggerClient::ModelsIPStat](docs/ModelsIPStat.md)
  - [SwaggerClient::ModelsIPType](docs/ModelsIPType.md)
+ - [SwaggerClient::ModelsIncident](docs/ModelsIncident.md)
+ - [SwaggerClient::ModelsIncidentStatus](docs/ModelsIncidentStatus.md)
  - [SwaggerClient::ModelsInstance](docs/ModelsInstance.md)
  - [SwaggerClient::ModelsIntegration](docs/ModelsIntegration.md)
  - [SwaggerClient::ModelsIntegrationSettings](docs/ModelsIntegrationSettings.md)
@@ -257,7 +294,10 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::ModelsMember](docs/ModelsMember.md)
  - [SwaggerClient::ModelsMemberRole](docs/ModelsMemberRole.md)
  - [SwaggerClient::ModelsNotificationType](docs/ModelsNotificationType.md)
+ - [SwaggerClient::ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
  - [SwaggerClient::ModelsPIPStat](docs/ModelsPIPStat.md)
+ - [SwaggerClient::ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
+ - [SwaggerClient::ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
  - [SwaggerClient::ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SwaggerClient::ModelsQEvent](docs/ModelsQEvent.md)
  - [SwaggerClient::ModelsRDSuppression](docs/ModelsRDSuppression.md)
@@ -280,9 +320,13 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::ModelsSuppressionReason](docs/ModelsSuppressionReason.md)
  - [SwaggerClient::ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [SwaggerClient::ModelsSystemDomain](docs/ModelsSystemDomain.md)
+ - [SwaggerClient::ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
+ - [SwaggerClient::ModelsSystemTemplate](docs/ModelsSystemTemplate.md)
+ - [SwaggerClient::ModelsTag](docs/ModelsTag.md)
  - [SwaggerClient::ModelsTo](docs/ModelsTo.md)
  - [SwaggerClient::ModelsValidation](docs/ModelsValidation.md)
  - [SwaggerClient::ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [SwaggerClient::ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SwaggerClient::ModelsWMessage](docs/ModelsWMessage.md)
  - [SwaggerClient::UaparserDevice](docs/UaparserDevice.md)
  - [SwaggerClient::UaparserOs](docs/UaparserOs.md)

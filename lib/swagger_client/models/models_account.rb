@@ -24,11 +24,19 @@ module SwaggerClient
 
     attr_accessor :industry
 
+    attr_accessor :is_canceled
+
+    attr_accessor :is_last_payment_failed
+
+    attr_accessor :is_upgraded
+
     attr_accessor :lock_threshold
 
     attr_accessor :locked
 
     attr_accessor :name
+
+    attr_accessor :onboard_c_finished
 
     attr_accessor :onboard_q_answered
 
@@ -44,9 +52,13 @@ module SwaggerClient
         :'current_email_service_provider' => :'currentEmailServiceProvider',
         :'id' => :'id',
         :'industry' => :'industry',
-        :'lock_threshold' => :'lock_threshold',
+        :'is_canceled' => :'isCanceled',
+        :'is_last_payment_failed' => :'isLastPaymentFailed',
+        :'is_upgraded' => :'isUpgraded',
+        :'lock_threshold' => :'lockThreshold',
         :'locked' => :'locked',
         :'name' => :'name',
+        :'onboard_c_finished' => :'onboardCFinished',
         :'onboard_q_answered' => :'onboardQAnswered',
         :'sending_volume_per_month' => :'sendingVolumePerMonth',
         :'url' => :'url'
@@ -61,9 +73,13 @@ module SwaggerClient
         :'current_email_service_provider' => :'String',
         :'id' => :'Integer',
         :'industry' => :'String',
+        :'is_canceled' => :'BOOLEAN',
+        :'is_last_payment_failed' => :'BOOLEAN',
+        :'is_upgraded' => :'BOOLEAN',
         :'lock_threshold' => :'Integer',
         :'locked' => :'BOOLEAN',
         :'name' => :'String',
+        :'onboard_c_finished' => :'BOOLEAN',
         :'onboard_q_answered' => :'BOOLEAN',
         :'sending_volume_per_month' => :'String',
         :'url' => :'String'
@@ -98,8 +114,20 @@ module SwaggerClient
         self.industry = attributes[:'industry']
       end
 
-      if attributes.has_key?(:'lock_threshold')
-        self.lock_threshold = attributes[:'lock_threshold']
+      if attributes.has_key?(:'isCanceled')
+        self.is_canceled = attributes[:'isCanceled']
+      end
+
+      if attributes.has_key?(:'isLastPaymentFailed')
+        self.is_last_payment_failed = attributes[:'isLastPaymentFailed']
+      end
+
+      if attributes.has_key?(:'isUpgraded')
+        self.is_upgraded = attributes[:'isUpgraded']
+      end
+
+      if attributes.has_key?(:'lockThreshold')
+        self.lock_threshold = attributes[:'lockThreshold']
       end
 
       if attributes.has_key?(:'locked')
@@ -108,6 +136,10 @@ module SwaggerClient
 
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'onboardCFinished')
+        self.onboard_c_finished = attributes[:'onboardCFinished']
       end
 
       if attributes.has_key?(:'onboardQAnswered')
@@ -146,9 +178,13 @@ module SwaggerClient
           current_email_service_provider == o.current_email_service_provider &&
           id == o.id &&
           industry == o.industry &&
+          is_canceled == o.is_canceled &&
+          is_last_payment_failed == o.is_last_payment_failed &&
+          is_upgraded == o.is_upgraded &&
           lock_threshold == o.lock_threshold &&
           locked == o.locked &&
           name == o.name &&
+          onboard_c_finished == o.onboard_c_finished &&
           onboard_q_answered == o.onboard_q_answered &&
           sending_volume_per_month == o.sending_volume_per_month &&
           url == o.url
@@ -163,7 +199,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [api_key, created, current_email_service_provider, id, industry, lock_threshold, locked, name, onboard_q_answered, sending_volume_per_month, url].hash
+      [api_key, created, current_email_service_provider, id, industry, is_canceled, is_last_payment_failed, is_upgraded, lock_threshold, locked, name, onboard_c_finished, onboard_q_answered, sending_volume_per_month, url].hash
     end
 
     # Builds the object from hash

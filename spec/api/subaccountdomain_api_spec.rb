@@ -118,4 +118,30 @@ describe 'SubaccountdomainApi' do
     end
   end
 
+  # unit tests for domain_router_verify_by_token
+  # Verify Domain By Signed Token
+  # @param x_sub_account_api_key Sub-Account API Key
+  # @param domain_id the DomainId you want to get
+  # @param token The signed token used to verify
+  # @param [Hash] opts the optional parameters
+  # @return [ModelsDomain]
+  describe 'domain_router_verify_by_token test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for domain_router_verify_request
+  # Verify Domain By Email Request
+  # @param x_sub_account_api_key Sub-Account API Key
+  # @param domain_id the DomainId you want to get
+  # @param body The Email to be used to verify
+  # @param [Hash] opts the optional parameters
+  # @return [nil]
+  describe 'domain_router_verify_request test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
 end

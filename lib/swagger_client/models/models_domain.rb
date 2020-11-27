@@ -34,6 +34,8 @@ module SwaggerClient
 
     attr_accessor :track_verified
 
+    attr_accessor :verified
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -46,7 +48,8 @@ module SwaggerClient
         :'return_path' => :'returnPath',
         :'return_path_verified' => :'returnPathVerified',
         :'track' => :'track',
-        :'track_verified' => :'trackVerified'
+        :'track_verified' => :'trackVerified',
+        :'verified' => :'verified'
       }
     end
 
@@ -62,7 +65,8 @@ module SwaggerClient
         :'return_path' => :'ModelsDNSRecord',
         :'return_path_verified' => :'BOOLEAN',
         :'track' => :'ModelsDNSRecord',
-        :'track_verified' => :'BOOLEAN'
+        :'track_verified' => :'BOOLEAN',
+        :'verified' => :'BOOLEAN'
       }
     end
 
@@ -113,6 +117,10 @@ module SwaggerClient
       if attributes.has_key?(:'trackVerified')
         self.track_verified = attributes[:'trackVerified']
       end
+
+      if attributes.has_key?(:'verified')
+        self.verified = attributes[:'verified']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -142,7 +150,8 @@ module SwaggerClient
           return_path == o.return_path &&
           return_path_verified == o.return_path_verified &&
           track == o.track &&
-          track_verified == o.track_verified
+          track_verified == o.track_verified &&
+          verified == o.verified
     end
 
     # @see the `==` method
@@ -154,7 +163,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [created, dkim, dkim_config, dkim_verified, id, name, return_path, return_path_verified, track, track_verified].hash
+      [created, dkim, dkim_config, dkim_verified, id, name, return_path, return_path_verified, track, track_verified, verified].hash
     end
 
     # Builds the object from hash

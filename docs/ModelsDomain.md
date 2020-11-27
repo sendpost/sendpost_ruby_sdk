@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **return_path_verified** | **BOOLEAN** |  | [optional] 
 **track** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **track_verified** | **BOOLEAN** |  | [optional] 
+**verified** | **BOOLEAN** |  | [optional] 
 
 

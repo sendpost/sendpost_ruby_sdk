@@ -6,9 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**account_webhook_router_count**](AccountwebhookApi.md#account_webhook_router_count) | **GET** /account/webhook/count | 
 [**account_webhook_router_create**](AccountwebhookApi.md#account_webhook_router_create) | **POST** /account/webhook/ | 
-[**account_webhook_router_create_account_webhook_in_account_webhook_cache**](AccountwebhookApi.md#account_webhook_router_create_account_webhook_in_account_webhook_cache) | **POST** /account/webhook/cache | 
 [**account_webhook_router_delete**](AccountwebhookApi.md#account_webhook_router_delete) | **DELETE** /account/webhook/{webhookId} | 
-[**account_webhook_router_delete_account_webhook_in_account_webhook_cache**](AccountwebhookApi.md#account_webhook_router_delete_account_webhook_in_account_webhook_cache) | **DELETE** /account/webhook/cache | 
 [**account_webhook_router_get**](AccountwebhookApi.md#account_webhook_router_get) | **GET** /account/webhook/{webhookId} | 
 [**account_webhook_router_get_all**](AccountwebhookApi.md#account_webhook_router_get_all) | **GET** /account/webhook/ | 
 [**account_webhook_router_update**](AccountwebhookApi.md#account_webhook_router_update) | **PUT** /account/webhook/{webhookId} | 
@@ -109,51 +107,6 @@ No authorization required
 
 
 
-# **account_webhook_router_create_account_webhook_in_account_webhook_cache**
-> account_webhook_router_create_account_webhook_in_account_webhook_cache(body)
-
-
-
-Add Account Webhook To AccountWebhook Cache
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::AccountwebhookApi.new
-
-body = SwaggerClient::ModelsAccountWebhook.new # ModelsAccountWebhook | Add account webhook to cache
-
-
-begin
-  api_instance.account_webhook_router_create_account_webhook_in_account_webhook_cache(body)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountwebhookApi->account_webhook_router_create_account_webhook_in_account_webhook_cache: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ModelsAccountWebhook**](ModelsAccountWebhook.md)| Add account webhook to cache | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 # **account_webhook_router_delete**
 > ModelsDeleteResponse account_webhook_router_delete(x_account_api_key, webhook_id)
 
@@ -191,51 +144,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsDeleteResponse**](ModelsDeleteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **account_webhook_router_delete_account_webhook_in_account_webhook_cache**
-> account_webhook_router_delete_account_webhook_in_account_webhook_cache(body)
-
-
-
-Delete Account Webhook which is in AccountWebhook Cache
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::AccountwebhookApi.new
-
-body = SwaggerClient::ModelsAccountWebhook.new # ModelsAccountWebhook | AccountWebhook content
-
-
-begin
-  api_instance.account_webhook_router_delete_account_webhook_in_account_webhook_cache(body)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountwebhookApi->account_webhook_router_delete_account_webhook_in_account_webhook_cache: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ModelsAccountWebhook**](ModelsAccountWebhook.md)| AccountWebhook content | 
-
-### Return type
-
-nil (empty response body)
 
 ### Authorization
 

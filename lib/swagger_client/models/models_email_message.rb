@@ -32,6 +32,8 @@ module SwaggerClient
 
     attr_accessor :subject
 
+    attr_accessor :template
+
     attr_accessor :text_body
 
     attr_accessor :to
@@ -52,6 +54,7 @@ module SwaggerClient
         :'pre_text' => :'preText',
         :'reply_to' => :'replyTo',
         :'subject' => :'subject',
+        :'template' => :'template',
         :'text_body' => :'textBody',
         :'to' => :'to',
         :'track_clicks' => :'trackClicks',
@@ -71,6 +74,7 @@ module SwaggerClient
         :'pre_text' => :'String',
         :'reply_to' => :'ModelsReplyTo',
         :'subject' => :'String',
+        :'template' => :'String',
         :'text_body' => :'String',
         :'to' => :'Array<ModelsTo>',
         :'track_clicks' => :'BOOLEAN',
@@ -122,6 +126,10 @@ module SwaggerClient
         self.subject = attributes[:'subject']
       end
 
+      if attributes.has_key?(:'template')
+        self.template = attributes[:'template']
+      end
+
       if attributes.has_key?(:'textBody')
         self.text_body = attributes[:'textBody']
       end
@@ -168,6 +176,7 @@ module SwaggerClient
           pre_text == o.pre_text &&
           reply_to == o.reply_to &&
           subject == o.subject &&
+          template == o.template &&
           text_body == o.text_body &&
           to == o.to &&
           track_clicks == o.track_clicks &&
@@ -183,7 +192,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [amp_body, from, groups, headers, html_body, ippool, pre_text, reply_to, subject, text_body, to, track_clicks, track_opens].hash
+      [amp_body, from, groups, headers, html_body, ippool, pre_text, reply_to, subject, template, text_body, to, track_clicks, track_opens].hash
     end
 
     # Builds the object from hash

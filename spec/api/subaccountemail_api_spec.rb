@@ -44,4 +44,16 @@ describe 'SubaccountemailApi' do
     end
   end
 
+  # unit tests for email_router_send_email_with_template
+  # Send Email To Contacts With Template
+  # @param x_sub_account_api_key Sub-Account API Key
+  # @param body The Email Message
+  # @param [Hash] opts the optional parameters
+  # @return [Array<ModelsEmailResponse>]
+  describe 'email_router_send_email_with_template test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
 end

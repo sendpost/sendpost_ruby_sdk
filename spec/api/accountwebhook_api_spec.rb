@@ -55,17 +55,6 @@ describe 'AccountwebhookApi' do
     end
   end
 
-  # unit tests for account_webhook_router_create_account_webhook_in_account_webhook_cache
-  # Add Account Webhook To AccountWebhook Cache
-  # @param body Add account webhook to cache
-  # @param [Hash] opts the optional parameters
-  # @return [nil]
-  describe 'account_webhook_router_create_account_webhook_in_account_webhook_cache test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for account_webhook_router_delete
   # Delete AccountWebhook
   # @param x_account_api_key Account API Key
@@ -73,17 +62,6 @@ describe 'AccountwebhookApi' do
   # @param [Hash] opts the optional parameters
   # @return [ModelsDeleteResponse]
   describe 'account_webhook_router_delete test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for account_webhook_router_delete_account_webhook_in_account_webhook_cache
-  # Delete Account Webhook which is in AccountWebhook Cache
-  # @param body AccountWebhook content
-  # @param [Hash] opts the optional parameters
-  # @return [nil]
-  describe 'account_webhook_router_delete_account_webhook_in_account_webhook_cache test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

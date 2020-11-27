@@ -20,7 +20,11 @@ module SwaggerClient
 
     attr_accessor :industry
 
+    attr_accessor :logo_url
+
     attr_accessor :name
+
+    attr_accessor :onboard_c_finished
 
     attr_accessor :onboard_q_answered
 
@@ -38,7 +42,9 @@ module SwaggerClient
         :'company_name' => :'companyName',
         :'current_email_service_provider' => :'currentEmailServiceProvider',
         :'industry' => :'industry',
+        :'logo_url' => :'logoURL',
         :'name' => :'name',
+        :'onboard_c_finished' => :'onboardCFinished',
         :'onboard_q_answered' => :'onboardQAnswered',
         :'phone_number' => :'phoneNumber',
         :'sending_volume_per_month' => :'sendingVolumePerMonth',
@@ -53,7 +59,9 @@ module SwaggerClient
         :'company_name' => :'String',
         :'current_email_service_provider' => :'String',
         :'industry' => :'String',
+        :'logo_url' => :'String',
         :'name' => :'String',
+        :'onboard_c_finished' => :'BOOLEAN',
         :'onboard_q_answered' => :'BOOLEAN',
         :'phone_number' => :'String',
         :'sending_volume_per_month' => :'String',
@@ -82,8 +90,16 @@ module SwaggerClient
         self.industry = attributes[:'industry']
       end
 
+      if attributes.has_key?(:'logoURL')
+        self.logo_url = attributes[:'logoURL']
+      end
+
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'onboardCFinished')
+        self.onboard_c_finished = attributes[:'onboardCFinished']
       end
 
       if attributes.has_key?(:'onboardQAnswered')
@@ -128,7 +144,9 @@ module SwaggerClient
           company_name == o.company_name &&
           current_email_service_provider == o.current_email_service_provider &&
           industry == o.industry &&
+          logo_url == o.logo_url &&
           name == o.name &&
+          onboard_c_finished == o.onboard_c_finished &&
           onboard_q_answered == o.onboard_q_answered &&
           phone_number == o.phone_number &&
           sending_volume_per_month == o.sending_volume_per_month &&
@@ -145,7 +163,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [company_name, current_email_service_provider, industry, name, onboard_q_answered, phone_number, sending_volume_per_month, uid, verify_email].hash
+      [company_name, current_email_service_provider, industry, logo_url, name, onboard_c_finished, onboard_q_answered, phone_number, sending_volume_per_month, uid, verify_email].hash
     end
 
     # Builds the object from hash

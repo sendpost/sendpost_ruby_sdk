@@ -131,57 +131,6 @@ module SwaggerClient
       end
       return data, status_code, headers
     end
-    # Add Account Webhook To AccountWebhook Cache
-    # @param body Add account webhook to cache
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def account_webhook_router_create_account_webhook_in_account_webhook_cache(body, opts = {})
-      account_webhook_router_create_account_webhook_in_account_webhook_cache_with_http_info(body, opts)
-      nil
-    end
-
-    # Add Account Webhook To AccountWebhook Cache
-    # @param body Add account webhook to cache
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def account_webhook_router_create_account_webhook_in_account_webhook_cache_with_http_info(body, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: AccountwebhookApi.account_webhook_router_create_account_webhook_in_account_webhook_cache ...'
-      end
-      # verify the required parameter 'body' is set
-      if @api_client.config.client_side_validation && body.nil?
-        fail ArgumentError, "Missing the required parameter 'body' when calling AccountwebhookApi.account_webhook_router_create_account_webhook_in_account_webhook_cache"
-      end
-      # resource path
-      local_var_path = '/account/webhook/cache'
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(body)
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AccountwebhookApi#account_webhook_router_create_account_webhook_in_account_webhook_cache\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
     # Delete AccountWebhook
     # @param x_account_api_key Account API Key
     # @param webhook_id The AccountWebhookId you want to delete
@@ -238,57 +187,6 @@ module SwaggerClient
         :return_type => 'ModelsDeleteResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AccountwebhookApi#account_webhook_router_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-    # Delete Account Webhook which is in AccountWebhook Cache
-    # @param body AccountWebhook content
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def account_webhook_router_delete_account_webhook_in_account_webhook_cache(body, opts = {})
-      account_webhook_router_delete_account_webhook_in_account_webhook_cache_with_http_info(body, opts)
-      nil
-    end
-
-    # Delete Account Webhook which is in AccountWebhook Cache
-    # @param body AccountWebhook content
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def account_webhook_router_delete_account_webhook_in_account_webhook_cache_with_http_info(body, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: AccountwebhookApi.account_webhook_router_delete_account_webhook_in_account_webhook_cache ...'
-      end
-      # verify the required parameter 'body' is set
-      if @api_client.config.client_side_validation && body.nil?
-        fail ArgumentError, "Missing the required parameter 'body' when calling AccountwebhookApi.account_webhook_router_delete_account_webhook_in_account_webhook_cache"
-      end
-      # resource path
-      local_var_path = '/account/webhook/cache'
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(body)
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AccountwebhookApi#account_webhook_router_delete_account_webhook_in_account_webhook_cache\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
