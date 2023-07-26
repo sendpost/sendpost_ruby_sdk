@@ -1,0 +1,438 @@
+openapi: 3.0.2
+info:
+  title: SendPost API
+  description: Email API and SMTP relay to not just send and measure email sending,
+    but also alert and optimise. We provide you with tools, expertise and support
+    needed to reliably deliver emails to your customers inboxes on time, every time.
+  version: 1.0.0
+  termsOfService: http://sendpost.io/terms-of-service
+  contact:
+    email: hello@sendpost.io
+servers:
+  - url: https://api.sendpost.io/api/v1/
+paths:
+  /subaccount/email/:
+    post:
+      tags:
+        - email
+      description: Send Email To Contacts
+      operationId: send_email
+      parameters:
+        - in: header
+          name: X-SubAccount-ApiKey
+          description: Sub-Account API Key
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: "Email message"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailMessage'
+      responses:
+        '200':
+          description: '"Email Message Processed Successfully"'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EmailResponse'
+        '401':
+          description: Not Authorized
+        '422':
+          description: Request body is not in proper format
+        '500':
+          description: Internal Server Error
+  /subaccount/email/template:
+    post:
+      tags:
+        - email
+      description: Send Email To Contacts With Template
+      operationId: send_email_with_template
+      parameters:
+        - in: header
+          name: X-SubAccount-ApiKey
+          description: Sub-Account API Key
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: "Email message"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailMessage'
+      responses:
+        '200':
+          description: '"Email Message Processed Successfully"'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EmailResponse'
+        '401':
+          description: Not Authorized
+        '422':
+          description: Request body is not in proper format
+        '500':
+          description: Internal Server Error
+components:
+  schemas:
+    EmailMessage:
+      title: EmailMessage
+      type: object
+      properties:
+        attachments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attachment'
+        from:
+          $ref: '#/components/schemas/From'
+        groups:
+          type: array
+          items:
+            type: string
+          example: ["promotion", "techcrunch-launch"]
+        htmlBody:
+          type: string
+          example: "<html><body>Thanks for your trust in Hooli {{.Name}}. We are trying launching Nucleus at TechCrunch Disrupt - our cloud based compression platform. That you could easily integrate it into {{.Company}}.</html></body>"
+        ippool:
+          type: string
+          example: "promotional-hooli"
+        preText:
+          type: string
+          example: "Follow the steps to integrate our video compression API"
+        replyTo:
+          $ref: '#/components/schemas/ReplyTo'
+        subject:
+          type: string
+          example: "Welcome to Nucles {{.Name}}:) Let's get started"
+        template:
+          type: string
+          example: "welcome-onboarding"
+        textBody:
+          type: string
+          example: "Thanks for your trust in Hooli {{.Name}}. We are trying launching Nucleus at TechCrunch Disrupt - our cloud based compression platform. That you could easily integrate it into {{.Company}}"
+        to:
+          type: array
+          items:
+            $ref: '#/components/schemas/To'
+        trackClicks:
+          type: boolean
+          example: true
+        trackOpens:
+          type: boolean
+          example: true
+        headers:
+          type: object
+          example:
+            X-Campaign-Id: "techcrunch-launch"
+        ampBody:
+          type: string
+    WebhookEvent:
+      title: WebhookEvent
+      type: object
+      properties:
+        event:
+          $ref: '#/components/schemas/QEvent'
+        emailMessage:
+          $ref: '#/components/schemas/QEmailMessage'
+    QEmailMessage:
+      title: QEmailMessage
+      type: object
+      properties:
+        accountID:
+          type: integer
+          format: int64
+          example: 117
+        ampBody:
+          type: string
+        attachments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attachment'
+        attempt:
+          type: integer
+          format: int64
+          example: 1
+        customFields:
+          type: object
+          example:
+            Company: "Bachmanity"
+        emailType:
+          type: string
+          example: "gmail"
+        from:
+          $ref: '#/components/schemas/From'
+        groups:
+          type: array
+          items:
+            type: string
+          example: ["promotion", "techcrunch-launch"]
+        headerBcc:
+          type: array
+          items:
+            $ref: '#/components/schemas/CopyTo'
+        headerCc:
+          type: array
+          items:
+            $ref: '#/components/schemas/CopyTo'
+        headerTo:
+          $ref: '#/components/schemas/To'
+        headers:
+          type: object
+          example:
+            X-Campaign-Id: "techcrunch-launch"
+        htmlBody:
+          type: string
+          example: "<html><body>{{.FirstName}}, I have been following your journey since {{.Company}} days. Just wanted to thank you for inspiring us.</body></html>"
+        ipID:
+          type: integer
+          format: int64
+          example: 18
+        ipPool:
+          type: string
+          example: "transactional-piedpiper"
+        localIP:
+          type: string
+          example: "172.30.2.45"
+        messageID:
+          type: string
+          example: "0c6c7600-e68d-498e-b924-d8105130cc1d"
+        preText:
+          type: string
+          example: "thanks for the inspiration ..."
+        publicIP:
+          type: string
+          example: "52.13.11.9"
+        replyTo:
+          $ref: '#/components/schemas/ReplyTo'
+        subAccountID:
+          type: integer
+          format: int64
+          example: 234
+        subject:
+          type: string
+          example: "Building great products?"
+        submittedAt:
+          type: integer
+          format: int64
+          example: 1567512491587205024
+        textBody:
+          type: string
+          example: "{{.FirstName}}, I have been following your journey since {{.Company}} days. Just wanted to thank you for inspiring us."
+        to:
+          $ref: '#/components/schemas/To'
+        trackClicks:
+          type: boolean
+          example: true
+        trackOpens:
+          type: boolean
+          example: true
+    QEvent:
+      title: QEvent
+      type: object
+      properties:
+        accountID:
+          type: integer
+          format: int64
+          example: 8
+        eventID:
+          type: string
+          example: "8690608c-2538-4173-a463-f0de475633da"
+        eventMetadata:
+          $ref: '#/components/schemas/EventMetadata'
+        from:
+          type: string
+          example: "gavin@hooli.com"
+        groups:
+          type: array
+          items:
+            type: string
+          example: ["promotion", "techcrunch-launch"]
+        ipID:
+          type: integer
+          format: int64
+          example: 7
+        messageID:
+          type: string
+          example: "edcb833d-5ef6-48c3-936f-1de0b74843d4"
+        messageType:
+          type: string
+          example: "default"
+        subAccountID:
+          type: integer
+          format: int64
+          example: 28
+        submittedAt:
+          type: integer
+          format: int64
+          example: 1689245147247766056
+        to:
+          type: string
+          example: "richard@piedpiper.com"
+        tpspId:
+          type: integer
+          format: int64
+          example: 0
+        type:
+          type: integer
+          format: int64
+          example: 2
+    Attachment:
+      title: Attachment
+      type: object
+      properties:
+        content:
+          type: string
+          example: "V2VsY29tZSB0byBTZW5kUG9zdCEgOikK"
+        filename:
+          type: string
+          example: "file0.txt"
+    To:
+      title: To
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Elrich Bachman"
+        email:
+          type: string
+          example: "elrich@bachmanity.com"
+        cc:
+          type: array
+          items:
+            $ref: '#/components/schemas/CopyTo'
+        bcc:
+          type: array
+          items:
+            $ref: '#/components/schemas/CopyTo'
+        customFields:
+          type: object
+          example:
+            Company: "Bachmanity"
+    From:
+      title: From
+      type: object
+      properties:
+        email:
+          type: string
+          example: "gavin@hooli.com"
+        name:
+          type: string
+          example: "Gavin Belson"
+    ReplyTo:
+      title: ReplyTo
+      type: object
+      properties:
+        email:
+          type: string
+          example: "welcome@hooli.vom"
+        name:
+          type: string
+          example: "Team @ Hooli"
+    CopyTo:
+      title: CopyTo
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Nelson Bighetti"
+        email:
+          type: string
+          example: "bighead@bachmanity.com"
+        customFields:
+          type: object
+          example:
+            Company: "Bachmanity"
+    EventMetadata:
+      title: EventMetadata
+      type: object
+      properties:
+        clickedURL:
+          type: string
+        device:
+          $ref: '#/components/schemas/Device'
+        geo:
+          $ref: '#/components/schemas/City'
+        os:
+          $ref: '#/components/schemas/Os'
+        smtpCode:
+          type: integer
+          format: int64
+          example: 200
+        smtpDescription:
+          type: string
+          example: "email delivered successfully"
+        userAgent:
+          $ref: '#/components/schemas/UserAgent'
+    EmailResponse:
+      title: EmailResponse
+      type: object
+      properties:
+        errorCode:
+            type: integer
+            example: 500
+        message:
+          type: string
+          example: "ok"
+        messageId:
+          type: string
+          example: "0e139af1-f1xe-480d-b08d-eg28m48kf48d"
+        submittedAt:
+          type: integer
+          format: int64
+          example: 1567512491587205124
+        to:
+          type: string
+          example: "bighead@bachmanity.com"
+    Device:
+      title: Device
+      type: object
+      properties:
+        Family:
+          type: string
+    Os:
+      title: Os
+      type: object
+      properties:
+        Family:
+          type: string
+        Major:
+          type: string
+        Minor:
+          type: string
+        Patch:
+          type: string
+        PatchMinor:
+          type: string
+    UserAgent:
+      title: UserAgent
+      type: object
+      properties:
+        Family:
+          type: string
+        Major:
+          type: string
+        Minor:
+          type: string
+        Patch:
+          type: string
+    City:
+      title: City
+      type: object
+      properties:
+        cityID:
+          type: integer
+          format: int32
+        continentCode:
+          type: string
+        countryCode:
+          type: string
+        postalCode:
+          type: string
+        timeZone:
+          type: string
