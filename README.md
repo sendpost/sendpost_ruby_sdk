@@ -44,6 +44,41 @@ end
 
 ```
 
+Example with cc, bcc and template:
+
+```ruby
+require 'sendpost_ruby_sdk'
+
+api_instance = Sendpost::EmailApi.new
+x_sub_account_api_key = 'your_api_key' # String | Sub-Account API Key
+email_message = Sendpost::EmailMessage.new
+email_message.from = {
+  email: 'richard@piedpiper.com'
+}
+email_message.to = [{
+  email: 'gavin@hooli.com',
+  cc: [{ email: 'dinesh@bachmanity.com' }],
+  bcc: [{ email: 'jian@bachmanity.com' }]
+}]
+
+email_message.subject = 'Hello World'
+email_message.template = 'Welcome Mail'
+email_message.html_body =  '<strong>it works!</strong>'
+email_message.ippool = 'PiedPiper'
+
+opts = {
+  email_message: email_message # EmailMessage | Email message
+}
+
+begin
+  result = api_instance.send_email_with_template(x_sub_account_api_key, opts)
+  p result
+rescue Sendpost::ApiError => e
+  puts "Exception when calling EmailApi->send_email: #{e}"
+end
+
+```
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
