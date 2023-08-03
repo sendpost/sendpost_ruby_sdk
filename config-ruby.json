@@ -4,8 +4,8 @@
   "gemAuthor": "Sendpost",
   "gemAuthorEmail": "dev@sendpost.io",
   "gemDescription": "Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.",
-  "gemHomepage": "https://sendpost.io/",
+  "gemHomepage": "https://github.com/sendpost/sendpost_ruby_sdk",
   "gemSummary": "SendPost Ruby API",
   "gemName": "sendpost_ruby_sdk",
-  "gemVersion": "1.0.0"
+  "gemVersion": "1.0.1"
 }

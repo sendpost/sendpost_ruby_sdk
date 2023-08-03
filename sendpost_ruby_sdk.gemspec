@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Sendpost"]
   s.email       = ["dev@sendpost.io"]
-  s.homepage    = "https://sendpost.io/"
+  s.homepage    = "https://github.com/sendpost/sendpost_ruby_sdk"
   s.summary     = "SendPost Ruby API"
   s.description = "Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time."
   s.license     = "Unlicense"

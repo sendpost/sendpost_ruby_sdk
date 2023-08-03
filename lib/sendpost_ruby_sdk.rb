@@ -20,6 +20,8 @@ require 'sendpost_ruby_sdk/configuration'
 require 'sendpost_ruby_sdk/models/attachment'
 require 'sendpost_ruby_sdk/models/city'
 require 'sendpost_ruby_sdk/models/copy_to'
+require 'sendpost_ruby_sdk/models/count_stat'
+require 'sendpost_ruby_sdk/models/delete_response'
 require 'sendpost_ruby_sdk/models/device'
 require 'sendpost_ruby_sdk/models/email_message'
 require 'sendpost_ruby_sdk/models/email_response'
@@ -28,13 +30,18 @@ require 'sendpost_ruby_sdk/models/from'
 require 'sendpost_ruby_sdk/models/os'
 require 'sendpost_ruby_sdk/models/q_email_message'
 require 'sendpost_ruby_sdk/models/q_event'
+require 'sendpost_ruby_sdk/models/rd_suppression'
+require 'sendpost_ruby_sdk/models/r_suppression'
 require 'sendpost_ruby_sdk/models/reply_to'
+require 'sendpost_ruby_sdk/models/suppression'
+require 'sendpost_ruby_sdk/models/suppression_email'
 require 'sendpost_ruby_sdk/models/to'
 require 'sendpost_ruby_sdk/models/user_agent'
 require 'sendpost_ruby_sdk/models/webhook_event'
 
 # APIs
 require 'sendpost_ruby_sdk/api/email_api'
+require 'sendpost_ruby_sdk/api/suppression_api'
 
 module Sendpost
   class << self

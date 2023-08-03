@@ -8,7 +8,7 @@ Email API and SMTP relay to not just send and measure email sending, but also al
 ## Installation
 
 ```shell
-gem install sendpost_ruby_sdk-1.0.0.gem
+gem install sendpost_ruby_sdk
 ```
 
 ## Getting Started
@@ -87,6 +87,10 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Sendpost::EmailApi* | [**send_email**](docs/EmailApi.md#send_email) | **POST** /subaccount/email/ | 
 *Sendpost::EmailApi* | [**send_email_with_template**](docs/EmailApi.md#send_email_with_template) | **POST** /subaccount/email/template | 
+*Sendpost::SuppressionApi* | [**count**](docs/SuppressionApi.md#count) | **GET** /subaccount/suppression/count | 
+*Sendpost::SuppressionApi* | [**create_suppressions**](docs/SuppressionApi.md#create_suppressions) | **POST** /subaccount/suppression/ | 
+*Sendpost::SuppressionApi* | [**delete_suppression**](docs/SuppressionApi.md#delete_suppression) | **DELETE** /subaccount/suppression/ | 
+*Sendpost::SuppressionApi* | [**get_suppressions**](docs/SuppressionApi.md#get_suppressions) | **GET** /subaccount/suppression/ | 
 
 
 ## Documentation for Models
@@ -94,6 +98,8 @@ Class | Method | HTTP request | Description
  - [Sendpost::Attachment](docs/Attachment.md)
  - [Sendpost::City](docs/City.md)
  - [Sendpost::CopyTo](docs/CopyTo.md)
+ - [Sendpost::CountStat](docs/CountStat.md)
+ - [Sendpost::DeleteResponse](docs/DeleteResponse.md)
  - [Sendpost::Device](docs/Device.md)
  - [Sendpost::EmailMessage](docs/EmailMessage.md)
  - [Sendpost::EmailResponse](docs/EmailResponse.md)
@@ -102,7 +108,11 @@ Class | Method | HTTP request | Description
  - [Sendpost::Os](docs/Os.md)
  - [Sendpost::QEmailMessage](docs/QEmailMessage.md)
  - [Sendpost::QEvent](docs/QEvent.md)
+ - [Sendpost::RDSuppression](docs/RDSuppression.md)
+ - [Sendpost::RSuppression](docs/RSuppression.md)
  - [Sendpost::ReplyTo](docs/ReplyTo.md)
+ - [Sendpost::Suppression](docs/Suppression.md)
+ - [Sendpost::SuppressionEmail](docs/SuppressionEmail.md)
  - [Sendpost::To](docs/To.md)
  - [Sendpost::UserAgent](docs/UserAgent.md)
  - [Sendpost::WebhookEvent](docs/WebhookEvent.md)
