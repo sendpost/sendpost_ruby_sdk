@@ -79,6 +79,115 @@ end
 
 ```
 
+## Suppressions
+
+Create Suppressions
+
+```ruby
+require 'sendpost_ruby_sdk'
+api_instance = Sendpost::SuppressionApi.new
+
+x_sub_account_api_key = 'your_api_key'
+
+r_suppression = Sendpost::RSuppression.new
+
+r_suppression.hard_bounce = [{ email: 'richard@piedpiper_fake.com' }]
+
+# fields are optional, but you have to send at least one of them.
+
+# r_suppression.manual = [{ email: 'richard@piedpiper_fake2.com' }]
+# r_suppression.spam_complaint = [{ email: 'richard@piedpiper_fake3.com' }]
+# r_suppression.unsubscribe = [{ email: 'richard@piedpiper_fake4.com' }]
+
+opts = {
+  r_suppression: r_suppression
+}
+
+p opts
+
+begin
+  result = api_instance.create_suppressions(x_sub_account_api_key, opts)
+  p result
+rescue Sendpost::ApiError => e
+  puts "Exception when calling SuppressionApi->create_suppressions: #{e}"
+end
+```
+
+Get Suppressions
+
+```ruby
+require 'sendpost_ruby_sdk'
+api_instance = Sendpost::SuppressionApi.new
+
+x_sub_account_api_key = 'your_api_key'
+
+opts = {
+  offset: 0,
+  limit: 20,
+  search: nil,
+  from: '2023-06-07',
+  to: '2023-08-04'
+}
+
+p opts
+
+begin
+  result = api_instance.get_suppressions(x_sub_account_api_key, opts)
+  p result
+rescue Sendpost::ApiError => e
+  puts "Exception when calling SuppressionApi->get_suppressions: #{e}"
+end
+```
+
+Delete Suppression
+
+```ruby
+require 'sendpost_ruby_sdk'
+api_instance = Sendpost::SuppressionApi.new
+
+x_sub_account_api_key = 'your_api_key'
+
+rd_suppression = Sendpost::RDSuppression.new
+
+rd_suppression.suppressions = [{ email: 'richard@piedpiper_fake4.com' }]
+
+opts = {
+  rd_suppression: rd_suppression
+}
+
+p opts
+
+begin
+  result = api_instance.delete_suppression(x_sub_account_api_key, opts)
+  p result
+rescue Sendpost::ApiError => e
+  puts "Exception when calling SuppressionApi->delete_suppression: #{e}"
+end
+```
+
+Count Suppression
+
+```ruby
+require 'sendpost_ruby_sdk'
+api_instance = Sendpost::SuppressionApi.new
+
+x_sub_account_api_key = 'your_api_key'
+
+opts = {
+  from: '2023-06-07',
+  to: '2023-08-04'
+}
+
+p opts
+
+begin
+  result = api_instance.count(x_sub_account_api_key, opts)
+  p result
+rescue Sendpost::ApiError => e
+  puts "Exception when calling SuppressionApi->count: #{e}"
+end
+```
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
