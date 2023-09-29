@@ -5,6 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **clicked_url** | **String** |  | [optional] |
+| **tracked_ip** | **String** |  | [optional] |
+| **raw_user_agent** | **String** |  | [optional] |
 | **device** | [**Device**](Device.md) |  | [optional] |
 | **geo** | [**City**](City.md) |  | [optional] |
 | **os** | [**Os**](Os.md) |  | [optional] |
@@ -19,6 +21,8 @@ require 'sendpost_ruby_sdk'
 
 instance = Sendpost::EventMetadata.new(
   clicked_url: null,
+  tracked_ip: null,
+  raw_user_agent: null,
   device: null,
   geo: null,
   os: null,

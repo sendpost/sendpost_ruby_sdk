@@ -511,6 +511,10 @@ components:
       properties:
         clickedURL:
           type: string
+        trackedIP:
+          type: string
+        rawUserAgent:
+          type: string
         device:
           $ref: '#/components/schemas/Device'
         geo:

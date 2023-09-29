@@ -8,4 +8,4 @@ script:
   - bundle install --path vendor/bundle
   - bundle exec rspec
   - gem build sendpost_ruby_sdk.gemspec
-  - gem install ./sendpost_ruby_sdk-1.0.1.gem
+  - gem install ./sendpost_ruby_sdk-1.2.2.gem

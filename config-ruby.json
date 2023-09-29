@@ -7,5 +7,5 @@
   "gemHomepage": "https://github.com/sendpost/sendpost_ruby_sdk",
   "gemSummary": "SendPost Ruby API",
   "gemName": "sendpost_ruby_sdk",
-  "gemVersion": "1.0.1"
+  "gemVersion": "1.2.2"
 }
